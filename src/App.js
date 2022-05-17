@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./profile/Profile";
+import photo from "./profile/photo.jpg";
 
 function App() {
+  const fullName = "Fat freddy's Drop" 
+  const handleName  = () => { alert(`Hello ${fullName}`) }
+  const bio =
+    "New Zealand seven-piece band from Wellington, whose musical style has been characterised as any combination of dub, reggae, soul, jazz, rhythm and blues, and techno.";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile fullName={fullName} bio={bio} handleName ={handleName}>
+        <img src={photo} alt="Band Pic" />
+      </Profile>
     </div>
   );
 }
